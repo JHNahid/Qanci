@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width:100%;
+    height: 100%;
+    font-size:16px;
+    background:#F6F7F9;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+section{
+    padding: 60px 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    max-width: 1425px;
+}
+
+@font-face{
+    font-family: 'myfont-EXB';
+    src: url(/Bunch/Bunch-ExtraBold.ttf);
+}
+
+@font-face{
+    font-family: 'myfont';
+    src: url(/Bunch/Bunch-SemiBold.ttf);
+}
+
+p{
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6b6f7f;
+    margin: 0px;
+}
+h1{
+    font-size: 120px;
+    font-weight: 500;
+    color: #022D33;
+    font-family: 'myfont', sans-serif;
+}
+h2{
+    font-size: 44px;
+    color: black;
+    font-weight: 600;
+    font-family: 'myfont-EXB', sans-serif;
+}
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom:10px;
+    font-family: 'myfont-EXB', sans-serif;
+    color: black;
+    text-transform: capitalize;
+    font-size: 28px;
+    font-weight: 500;
+}
+a{
+    font-family: "Inter", serif;
+    font-weight: 500;
+    text-decoration: none;  
+    margin:0px;
+    color: #5a5a5a;
+}
+button{
+    cursor: pointer;
+    font-family: "Inter", serif;
+    border: 0;
+}
+button:focus, .form-control:focus, .form-select:focus{
+    outline: none;
+    box-shadow: none;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+// ========================
+
+// .primary-button{
+//     padding: 15px 30px;
+//     color: white;
+//     font-size: 16px;
+//     border-radius: 30px;
+//     align-items: center;
+//     background: #022D33;
+//     transition: all 0.3s ease-in-out;
+//     &:hover{
+//         background: white;
+//         color: #022D33;
+//     }
+// }
+.primary-button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    align-items: center;
+    background: #022D33;
+    transition: all 0.3s ease-in-out;
+    span{
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background: white;
+        margin-left: 6px;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+        background: white;
+        color: #022D33;
+        span{
+            background: #022D33;
+        }
+    }
+}
+
+.conner-img{
+    position: absolute;
+    z-index: 0;
+}
