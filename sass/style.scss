@@ -26,13 +26,46 @@
                 border: none;
                 outline: none;
                 box-shadow: none;
-                color: $white;
+                color: $primary;
                 padding: 15px 20px;
-                span{
-                    color: $white;
+                background: $white;
+                font-size: 16px;
+                border-radius: 30px;
+                align-items: center;
+                .fa-bars{
+                    color: $primary;
+                    size: 14px;
+                    margin-right: 4px;
                 }
             }
             .offcanvas{
+                margin-top: 0;
+                .offcanvas-header{
+                    .offcanvas-title{
+                        font-family: "Inter", serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #FFFFFF66;
+                    }
+                    .close-btn{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $white;
+                        font-weight: 600;
+                        background: #DFDFDF1A;
+                        border-radius: 30px;
+                        padding: 10px 20px;
+                        transition: $transition;
+                        span{
+                            font-size: 14px;
+                            margin-right: 3px;
+                        }
+                        &:hover{
+                            color: $secondary;
+                        }
+                    }
+                }
                 .offcanvas-body {
                     align-items: center;
                     .navbar-nav {
@@ -104,7 +137,7 @@ header{
         border-radius: 30px;
         margin: 10px 0;
         display: flex;
-        height: 295px;
+        min-height: 295px;
         flex-direction: column;
         justify-content: space-between;
         position: relative;
@@ -173,17 +206,44 @@ header{
 .brand-logo{
     .section-title{
         text-align: center;
-        p{
+        h4{
             font-size: 20px;
             color: $primary;
+            font-family: "Inter", serif;
         }
     }
     .logo-slider {
         width: 100%;
         overflow: hidden;
         position: relative;
+        background: transparent;
         white-space: nowrap;
         margin-top: 50px;
+        .shadow-left{
+            position: absolute;
+            left: 0;
+            height: 100px;
+
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(246,247,249,1) 6%, rgba(246,247,249,0) 81%, rgba(246,247,249,0) 100%);
+            z-index: 1;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(246,247,249,0) 6%, rgba(246,247,249,0) 47%, rgba(246,247,249,1) 100%);
+            z-index: 2;
+        }
         .logo-track {
             display: flex;
             gap: 20px;
@@ -201,20 +261,6 @@ header{
               }
           }
       }
-    
-    // .brand{
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     margin-top: 40px;
-    //     position: relative;
-    //     span{
-    //         margin: 5px 10px;
-    //         img{
-    //             width: 100%;
-    //         }
-    //     }
-    // }
 }
 // ==================== END Brand Logo =================== //
 
@@ -335,7 +381,6 @@ header{
             }
         }
         .section-title{
-            margin-bottom: 50px;
             h2{
                 font-size: 70px;
                 color: $primary;
@@ -343,6 +388,9 @@ header{
                 font-family: 'myfont', sans-serif;
             }
         }
+    }
+    .faq-btn-for-pc{
+        margin-top: 50px;
     }
     .accordion{
         padding: 8px;
@@ -356,6 +404,7 @@ header{
                     font-size: 16px;
                     font-weight: 600;
                     transition: $transition;
+                    margin-top: 5px;
                     border-radius: 6px 6px 0px 0px;
                     .arrow{
                         display: flex;
@@ -387,7 +436,6 @@ header{
             .accordion-body{
                 margin-bottom: 5px;
                 padding-top: 5px;
-                // transition: $transition;
                 border-radius: 0px 0px 6px 6px;
                 p{
                     margin-top: 10px;
@@ -401,10 +449,16 @@ header{
             }
         }
     }
+    .faq-btn-for-mobile{
+        text-align: center;
+        margin-top: 40px;
+        display: none;
+    }
 }
 // ==================== END FAQ =================== //
 
 .footer{
+    padding-top: 60px;
     padding-bottom: 20px;
     .bottom-wrapper{
         background: url(../images/bottom-bg.png) no-repeat center center/cover;
@@ -492,6 +546,9 @@ header{
                         }
                     }
                 }
+            }
+            .md-visible{
+                display: none;
             }
         }
         .copyright-text{
