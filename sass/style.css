@@ -29,11 +29,11 @@ img {
 
 @font-face {
   font-family: "myfont-EXB";
-  src: url(/Bunch/Bunch-ExtraBold.ttf);
+  src: url("/Bunch/Bunch-ExtraBold.ttf");
 }
 @font-face {
   font-family: "myfont";
-  src: url(/Bunch/Bunch-SemiBold.ttf);
+  src: url("/Bunch/Bunch-SemiBold.ttf");
 }
 p {
   font-family: "Inter", serif;
@@ -154,11 +154,44 @@ ul {
   border: none;
   outline: none;
   box-shadow: none;
-  color: white;
+  color: #022D33;
   padding: 15px 20px;
+  background: white;
+  font-size: 16px;
+  border-radius: 30px;
+  align-items: center;
 }
-.menu .navbar .container-fluid .navbar-toggler span {
+.menu .navbar .container-fluid .navbar-toggler .fa-bars {
+  color: #022D33;
+  size: 14px;
+  margin-right: 4px;
+}
+.menu .navbar .container-fluid .offcanvas {
+  margin-top: 0;
+}
+.menu .navbar .container-fluid .offcanvas .offcanvas-header .offcanvas-title {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+}
+.menu .navbar .container-fluid .offcanvas .offcanvas-header .close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  font-weight: 600;
+  background: rgba(223, 223, 223, 0.1019607843);
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+.menu .navbar .container-fluid .offcanvas .offcanvas-header .close-btn span {
+  font-size: 14px;
+  margin-right: 3px;
+}
+.menu .navbar .container-fluid .offcanvas .offcanvas-header .close-btn:hover {
+  color: #FE5000;
 }
 .menu .navbar .container-fluid .offcanvas .offcanvas-body {
   align-items: center;
@@ -225,7 +258,7 @@ header .content-box {
   border-radius: 30px;
   margin: 10px 0;
   display: flex;
-  height: 295px;
+  min-height: 295px;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -288,16 +321,42 @@ header .content-box .d-f-j .item h4 {
 .brand-logo .section-title {
   text-align: center;
 }
-.brand-logo .section-title p {
+.brand-logo .section-title h4 {
   font-size: 20px;
   color: #022D33;
+  font-family: "Inter", serif;
 }
 .brand-logo .logo-slider {
   width: 100%;
   overflow: hidden;
   position: relative;
+  background: transparent;
   white-space: nowrap;
   margin-top: 50px;
+}
+.brand-logo .logo-slider .shadow-left {
+  position: absolute;
+  left: 0;
+  height: 100px;
+}
+.brand-logo .logo-slider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(246, 247, 249) 6%, rgba(246, 247, 249, 0) 81%, rgba(246, 247, 249, 0) 100%);
+  z-index: 1;
+}
+.brand-logo .logo-slider::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(246, 247, 249, 0) 6%, rgba(246, 247, 249, 0) 47%, rgb(246, 247, 249) 100%);
+  z-index: 2;
 }
 .brand-logo .logo-slider .logo-track {
   display: flex;
@@ -427,14 +486,14 @@ header .content-box .d-f-j .item h4 {
 .faq .fax-content-text .mini-text p {
   color: #022D33;
 }
-.faq .fax-content-text .section-title {
-  margin-bottom: 50px;
-}
 .faq .fax-content-text .section-title h2 {
   font-size: 70px;
   color: #022D33;
   line-height: 60.2px;
   font-family: "myfont", sans-serif;
+}
+.faq .faq-btn-for-pc {
+  margin-top: 50px;
 }
 .faq .accordion {
   padding: 8px;
@@ -447,6 +506,7 @@ header .content-box .d-f-j .item h4 {
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+  margin-top: 5px;
   border-radius: 6px 6px 0px 0px;
 }
 .faq .accordion .accordion-item .accordion-header .accordion-button .arrow {
@@ -486,8 +546,14 @@ header .content-box .d-f-j .item h4 {
 .faq .accordion .accordion-item .show .accordion-body {
   background: #F6F7F9;
 }
+.faq .faq-btn-for-mobile {
+  text-align: center;
+  margin-top: 40px;
+  display: none;
+}
 
 .footer {
+  padding-top: 60px;
   padding-bottom: 20px;
 }
 .footer .bottom-wrapper {
@@ -566,6 +632,9 @@ header .content-box .d-f-j .item h4 {
   font-size: 16px;
   margin: 5px 0;
   margin-right: 20px;
+}
+.footer .bottom-wrapper .footer-links .md-visible {
+  display: none;
 }
 .footer .bottom-wrapper .copyright-text {
   padding: 48px 40px;
