@@ -1,4 +1,180 @@
 
 @media screen and (max-width:991px){
+    .menu .navbar .container-fluid .offcanvas {
+        background:#022D33;
+    }
+    .menu .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav{
+        padding:0;
+        background: transparent;
+    }
+    .menu .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link{
+        color: white;
+        font-size: 38px;
+        font-family: 'myfont-EXB', sans-serif;
+    }
+    .menu .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item .active{
+        color: #FE5000;
+    }
+    .menu .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item .active::before{
+       display: none;
+    }
+    .menu .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item{
+        border-bottom: 1px solid #FFFFFF1A;
+    }
+    .menu .navbar .container-fluid .offcanvas .offcanvas-body .log-in .primary-button{
+        background: white;
+        color: #022D33;
+        margin-top: 38px;
+    }
+    .menu .navbar .container-fluid .offcanvas .offcanvas-body .log-in .primary-button span{
+        background: #022D33;
+    }
+    header .hero-box .hero-text h1{
+        font-size: 100px;
+        line-height: 89px;
+    }
+    header .hero-box .hero-text h1 span img{
+        width: 75px;
+    }
+    .faq .accordion{
+        margin-top: 50px;
+    }
+    .faq-btn-for-pc{
+        display: none;
+    }
+    .faq .faq-btn-for-mobile{
+        display: block;
+    }
+    .footer .bottom-wrapper .footer-links .links ul {
+        flex-direction: column;
+        align-items: start;
+    }
+    .footer .bottom-wrapper .footer-links .links ul li a{
+        margin: 6px 0;
+    }
+    .footer .bottom-wrapper .footer-links .end-content .social-links ul {
+        flex-direction: column;
+        align-items: start;
+    }
+}
 
+@media screen and (max-width:767px){
+    header .hero-box .hero-img {
+        min-height: 334px;
+    }
+    header .content-box{
+        min-height: 295px;
+    }
+    header .content-box .d-f-j {
+        justify-content: start;
+        margin-top: 50px;
+    }
+}
+
+
+@media screen and (max-width:690px){
+    header .hero-box .hero-text h1 {
+        font-size: 75px;
+        line-height: 69px;
+    }
+    header .hero-box .hero-text h1 span img {
+        width: auto;
+        height: 56px;
+    }
+    header .hero-box .hero-img {
+        background: url(../images/hero-image.png) no-repeat top center / cover;
+        border-radius: 29px;
+    }
+    .work .work-box .section-title {
+        text-align: center;
+        padding-left: 0px;
+    }
+    .work .work-box .section-title h2 {
+        font-size: 62px;
+    }
+    .work .work-box .work-slider button.owl-prev {
+        position: static;
+    }
+    .work .work-box .work-slider button.owl-next {
+        position: static;
+    }
+    .owl-theme .owl-nav {
+        display: flex;
+        margin-top:40px;
+        justify-content: center;
+    }
+    .faq {
+        padding: 50px 20px;
+    }
+    .faq .fax-content-text {
+        text-align: center;
+    }
+    .faq .fax-content-text .mini-text {
+        justify-content: center;
+    }
+    .faq .fax-content-text .section-title h2 {
+        font-size: 62px;
+    }
+    .footer .bottom-wrapper .section-title h2 {
+        font-size: 63px;
+    }
+}
+
+@media screen and (max-width:576px){
+    .md-hidden{
+        display: none !important;
+    }
+    .menu .navbar .container-fluid .offcanvas {
+        width: 100%;
+    }
+    header .hero-box .hero-text h1 {
+        font-size: 56px;
+        line-height: 63px;
+    }
+    header .hero-box .hero-text h1 span img {
+        width: auto;
+        height: 48px;
+    }
+    .footer .bottom-wrapper .footer-links .md-visible {
+        display: block;
+    }
+    .footer .bottom-wrapper .footer-links .md-visible .email-links {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .footer .bottom-wrapper .copyright-text .copy-right {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:430px){
+    header .hero-box .hero-text {
+        padding-bottom: 30px;
+    }
+    header .content-box {
+        padding: 36px;
+    }
+    header .content-box .text {
+        justify-content: start;
+        flex-direction: column-reverse;
+    }
+    header .content-box .text .dot {
+        margin-bottom: 20px;
+    }
+    .work .work-box .section-title h2 {
+        font-size: 52px;
+    }
+    .faq {
+        padding: 50px 0px;
+    }
+    .faq .fax-content-text .section-title h2 {
+        font-size: 52px;
+    }
+    .footer .bottom-wrapper .section-title h2 {
+        font-size: 52px;
+        line-height: 60.2px;
+    }
+    .footer .bottom-wrapper .section-title .primary-button {
+        margin-top: 40px;
+    }
 }
